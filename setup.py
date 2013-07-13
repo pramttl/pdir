@@ -11,7 +11,7 @@ setup(
     name='pdir',
     version='0.1',
     description='A Selective-Pretty dir printer utility.',
-    long_description=open('README.rst').read(),
+    long_description=open('README.txt').read(),
     packages=['pdir',],
     license='BSD',
     keywords='dir namespaces',

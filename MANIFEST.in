@@ -1,0 +1,2 @@
+recursive-include pdir *.txt
+include README.rst

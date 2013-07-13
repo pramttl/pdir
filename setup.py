@@ -4,11 +4,14 @@
 #
 # Distributed under the BSD license, see LICENSE.txt
 
+
 from distutils.core import setup
 
 setup(
     name='pdir',
     version='0.1',
+    description='A Selective-Pretty dir printer utility.',
+    long_description=open('README.rst').read(),
     packages=['pdir',],
     license='BSD',
     keywords='dir namespaces',
@@ -20,7 +23,7 @@ setup(
       "Programming Language :: Python :: 2",
       ],
     url='https://github.com/pramttl/pdir',
-    long_description=open('README.rst').read(),
+    include_package_data=True,
 )
 
 

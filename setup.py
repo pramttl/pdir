@@ -10,12 +10,12 @@ import sys, os
 
 setup(
     name='pdir',
-    version='0.2.1',
-    description='A Selective, Pretty dir printing utility for Python.',
+    version='0.2.2',
+    description='A Pretty dir printing utility for Python.',
     long_description=open('README.txt').read(),
     packages=['pdir',],
     license='BSD',
-    keywords='dir namespaces',
+    keywords='regex dir pretty namespaces',
     author='Pranjal Mittal',
     author_email='pranjal.mittal.ece10@iitbhu.ac.in',
     classifiers=[

@@ -1,0 +1,19 @@
+0.2.2
+----
+
+Fixed an issue with pdir, pdir() now works without any arguments like dir
+
+Added a beta-function rdir() which is allows regular expression filtering like grep.
+
+The internal working, of pdir tweaked to make use of rdir without appreciable change in functionality.
+
+
+0.2.1
+-----
+
+Fixed a warning with the package installation.
+
+0.2
+---
+
+Added "pd" shorthand as an alternative reference to "pdir" for convenience.

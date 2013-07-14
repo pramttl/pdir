@@ -10,7 +10,7 @@ import sys, os
 
 setup(
     name='pdir',
-    version='0.2',
+    version='0.2.1',
     description='A Selective, Pretty dir printing utility for Python.',
     long_description=open('README.txt').read(),
     packages=['pdir',],

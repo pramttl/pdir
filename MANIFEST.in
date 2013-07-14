@@ -1,3 +1,0 @@
-recursive-include pdir *.txt
-include README.rst
-include LICENSE.txt

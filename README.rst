@@ -1,4 +1,4 @@
-pdir: Pretty, Selective dir listing utlity for Python
+pdir: Selective, Pretty dir printing utlity for Python
 ======================================================
     
 dir() is a very useful utility function in python for developers & debuggers,
@@ -37,7 +37,6 @@ An example:
 .. code-block:: python
 
     >>> from pdir import pdir
-    >>> from collections import list
     >>> pdir(list)
     ['append',
      'count',

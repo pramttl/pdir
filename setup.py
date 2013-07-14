@@ -11,7 +11,7 @@ import sys, os
 setup(
     name='pdir',
     version='0.2.2',
-    description='A Pretty dir printing utility for Python.',
+    description='A Selective,Pretty dir printing utility for Python.',
     long_description=open('README.txt').read(),
     packages=['pdir',],
     license='BSD',

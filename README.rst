@@ -94,7 +94,7 @@ It allows you to run a regex filter to restrict the names returned by dir.
     >>>
     >>> # The above shows a list of items that match the regex='in' filter. Very similar to the unix grep utility.
     >>>
-    >>> To get an inverse list (NOT matching regex) pass the *inv=True* parameter. keyword "inv" is optional.
+    >>> # To get an inverse list (NOT matching regex) pass the *inv=True* parameter. keyword "inv" is optional.
     >>> rdir(list, '__',True)
     >>> ['append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
     >>> # ^ returned a list without any '__' (underscores).

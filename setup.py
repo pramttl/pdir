@@ -12,7 +12,7 @@ setup(
     name='pdir',
     version='0.2.2',
     description='A Selective,Pretty dir printing utility for Python.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     packages=['pdir',],
     license='BSD',
     keywords='regex dir pretty namespaces',

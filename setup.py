@@ -20,7 +20,7 @@ setup(
     author_email='pranjal.mittal.ece10@iitbhu.ac.in',
     classifiers=[
       "Intended Audience :: Developers",
-      "Development Status :: 3 - Alpha",
+      "Development Status :: 4 - Beta",
       "Programming Language :: Python :: 2",
       ],
     url='https://github.com/pramttl/pdir',

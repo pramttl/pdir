@@ -98,10 +98,14 @@ It allows you to run a regex filter to restrict the names returned by dir.
     >>> To get an inverse list (NOT matching regex) pass the *inv=True* parameter. keyword "inv" is optional.
     >>> rdir(list, '__',True)
     >>> ['append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
-    >>> # Returns a list without the '__' (underscores).
+    >>> # ^ returned a list without any '__' (underscores).
 
-You can explore the endless possibilities with *rdir* for yourself. Infact the *pdir* function is itself dependent 
-on *rdir* in its internal usage.
+The *pdir* function is itself dependent on *rdir* in its internal usage.
+
+rdir -> 
+* Does not pretty print by default and returns a list which can be assigned to another object.
+* To enable pretty printing, you have to disable return, by providing ret = False as an additional parameter.
+
 
 
 Notes

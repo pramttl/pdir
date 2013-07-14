@@ -5,7 +5,8 @@
 # Distributed under the BSD license, see LICENSE.txt
 
 
-from distutils.core import setup
+from setuptools import setup, find_packages
+import sys, os
 
 setup(
     name='pdir',

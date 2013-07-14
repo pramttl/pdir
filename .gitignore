@@ -5,3 +5,4 @@ build/*
 MANIFEST
 README.txt
 *.pyp*
+pdir.egg-info/

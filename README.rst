@@ -21,6 +21,8 @@ and consider it as your new dir() friend.
 
 An example:
 
+.. code-block:: python
+
     >>> from pdir import pdir
     >>> from collections import list
     >>> pdir(list)
@@ -36,6 +38,8 @@ An example:
 
 Now lets compare this with what dir(list) prints:
 
+.. code-block:: python
+
     >>> dir(list)
     ['__add__', '__class__', .........................................................
     ..................................................................................
@@ -47,20 +51,22 @@ Some of the elements are substituted with dots (...) here.
 
 pdir > v0.1 also ships with a help utility (alpha)
 
+.. code-block:: python
+
     >>> pdir(list,help=True)
     -append-
-    L.append(object) -- append object to end-
-
+    L.append(object) -- append object to end- 
     -count-
-    L.count(value) -> integer -- return number of occurrences of value-
-
+    L.count(value) -> integer -- return number of occurrences of value-          
     -extend-
     L.extend(iterable) -- extend list by appending elements from the iterable-
 
 **pd** is also available in the new version as an alternative conveneint reference to the **pdir** function.
 
-    >> from pdir import pd
-    >> pd(list)
+.. code-block:: python
+
+    >>> from pdir import pd
+    >>> pd(list)
 
 Notes
 =====

@@ -9,8 +9,8 @@ from distutils.core import setup
 
 setup(
     name='pdir',
-    version='0.1',
-    description='A Selective-Pretty dir printer utility.',
+    version='0.2',
+    description='A Selective, Pretty dir printing utility for Python.',
     long_description=open('README.txt').read(),
     packages=['pdir',],
     license='BSD',

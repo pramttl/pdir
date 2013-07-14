@@ -1,6 +1,10 @@
 from pprint import pprint
 import urllib
 
+import __builtin__
+import inspect, re
+from itertools import ifilter, ifilterfalse
+
 def _withhelp(obj,sanitized_names):
     for attribute in sanitized_names:
         docstr = '%s.%s.__doc__'%(obj.__name__,attribute,)
@@ -13,9 +17,9 @@ def _withhelp(obj,sanitized_names):
         print
 
 
-def pdir(obj, help=False, spl=False, inner=False):
+def pdir(obj=None, help=False, spl=False, inner=False):
     '''
-    A small wrapper around the dir python function, that lets you do cool things.
+    A wrapper around the dir python function, that lets you do cool things.
         - Pretty printing
         - Filtered dir printing
 
@@ -29,6 +33,11 @@ def pdir(obj, help=False, spl=False, inner=False):
     '''
     sanitized_names = []
     name_list = dir(obj)
+
+    if obj:
+        name_list = __builtin__.dir(obj)
+    else:
+        name_list = list(inspect.currentframe().f_back.f_locals.keys())
 
     for name in name_list:
         if name[0:2] == '__' and name[-2:] == '__' and spl == False:
@@ -46,4 +55,37 @@ def pdir(obj, help=False, spl=False, inner=False):
 
 # Alternative convenient name for pdir.
 pd = pdir
+
+
+def rdir(obj=None, regex = '.*', inv = False, ret=True):
+    """A wrapper around the dir python function with additional filtering options.
+    Selects those names from a dir resposne which match the second regex argument.
+     
+    Names returned by the builtin function dir() are filtered
+    to include only those names matched by the specified regex, or
+    not containing the regex incase the inv = True parameter is passed along.
+
+    The function does not return by default, just pretty prints the filtered names.
+    The result can be returned explicity as a list by setting ret = True.
+    """
+    if obj:
+        name_list = __builtin__.dir(obj)
+    else:
+        name_list = list(inspect.currentframe().f_back.f_locals.keys())
+    if inv == False:
+        fil = ifilter
+    else:
+        fil = ifilterfalse
+    if not isinstance(regex, basestring):
+        regex = "|".join(regex)
+
+    name_list = list(fil(re.compile(regex).search, name_list))
+    if ret == False:
+        pprint(name_list)
+    else:
+        return name_list
+
+
+# Alternative convenient name for rdir.
+rd = rdir
 
